@@ -1,0 +1,8 @@
+{% import '_includes/forms.twig' as forms %}
+
+{{ forms.textField({
+    first: true,
+    label: 'API-key',
+    name: 'ctApiKey',
+    value: settings.ctApiKey
+}) }}

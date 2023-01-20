@@ -1,0 +1,47 @@
+{
+  "name": "cleantalk/craft-antispam",
+  "description": "Anti-Spam protection by CleanTalk",
+  "type": "craft-plugin",
+  "keywords": ["spam", "antispam", "anti-spam"],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "CleanTalk",
+      "homepage": "https://cleantalk.org"
+    }
+  ],
+  "support": {
+    "docs": "https://github.com/CleanTalk/craft-antispam/wiki",
+    "issues": "https://cleantalk.org/my/support"
+  },
+  "require": {
+    "craftcms/cms": "^3|^4"
+  },
+  "require-dev": {
+    "cleantalk/antispam": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cleantalk\\CraftAntispam\\": "src/"
+    },
+    "files": ["lib/autoload.php"]
+  },
+  "extra": {
+    "name": "Anti-Spam protection by CleanTalk",
+    "handle": "craft-antispam",
+    "hasCpSettings": true,
+    "hasCpSection": false,
+    "changelogUrl": "https://github.com/CleanTalk/craft-antispam/CHANGELOG.md",
+    "class": "Cleantalk\\CraftAntispam\\CraftAntispam",
+    "components": {
+      "CleantalkAntispamService": "Cleantalk\\CraftAntispam\\services\\CleantalkAntispamService"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "cleantalk/apbct-installer": true,
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}
