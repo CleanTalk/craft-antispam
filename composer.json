@@ -11,7 +11,7 @@
     }
   ],
   "support": {
-    "docs": "https://github.com/CleanTalk/craft-antispam/wiki",
+    "docs": "https://github.com/CleanTalk/craft-antispam/blob/master/README.md",
     "issues": "https://cleantalk.org/my/support"
   },
   "require": {
