@@ -9,8 +9,6 @@ use yii\base\Event;
 
 class CraftAntispam extends \craft\base\Plugin
 {
-    public bool $hasCpSettings = true;
-
     private $apiKey;
 
     public function init()
