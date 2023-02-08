@@ -1,10 +1,15 @@
 # Anti-Spam protection by CleanTalk plugin for Craft CMS
 
-%%here is a simple description%%
-
 ## Anti-Spam protection by CleanTalk Overview
 
-%%here is a long description%%
+Anti-Spam by CleanTalk is a cloud spam protection. Spam protection works invisble for visitors and they do not need to prove that they are not bots.
+
+Cloud capabilities allow you to view all processed requests in the anti-spam log and control the operation of the service.
+
+Additional features of personal lists expand your options for protecting the site.
+
+At the moment, protection is implemented only for spam protection for the Contact Form plugin.
+https://plugins.craftcms.com/contact-form
 
 ## Requirements
 
