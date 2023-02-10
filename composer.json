@@ -27,7 +27,7 @@
     "files": ["lib/autoload.php"]
   },
   "extra": {
-    "name": "Anti-Spam protection by CleanTalk",
+    "name": "Anti-Spam by CleanTalk, no captcha/recaptcha",
     "handle": "craft-antispam",
     "hasCpSettings": true,
     "hasCpSection": false,
