@@ -24,8 +24,6 @@ class CleantalkAntispamService extends Component
 
         $ct_request = new \Cleantalk\Common\Antispam\CleantalkRequest;
 
-        $data = $_POST;
-
         $ct_request->auth_key        = $apiKey;
         $ct_request->agent           = self::ENGINE;
 
@@ -41,6 +39,8 @@ class CleantalkAntispamService extends Component
 
         $ct_request->sender_email = isset($params['email']) ? $params['email'] : '';
         $ct_request->message = isset($params['message']) ? $params['message'] : '';
+
+        $ct_request->event_token = $_POST['ct_bot_detector_event_token'] ?? null;
 
         $ct                 = new \Cleantalk\Common\Antispam\Cleantalk();
         $ct->server_url     = 'https://moderate.cleantalk.org';
