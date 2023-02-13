@@ -3,7 +3,7 @@
   "description": "Anti-Spam protection by CleanTalk",
   "type": "craft-plugin",
   "keywords": ["spam", "antispam", "anti-spam"],
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "authors": [
     {
       "name": "CleanTalk",
