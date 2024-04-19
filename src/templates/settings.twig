@@ -2,7 +2,31 @@
 
 {{ forms.textField({
     first: true,
-    label: 'API-key',
+    label: 'Access key',
     name: 'ctApiKey',
     value: settings.ctApiKey
 }) }}
+
+{{ forms.textField({
+    first: false,
+    name: 'keyIsOk',
+    value: settings.keyIsOk,
+    type: 'hidden'
+}) }}
+
+{{ forms.textField({
+    first: false,
+    name: 'errorMsg',
+    value: settings.errorMsg,
+    type: 'hidden'
+}) }}
+
+{% if settings.errorMsg %}
+    <div class="alert-icon error card">
+        {{ settings.errorMsg }}
+    </div>
+{% else %}
+    <div class="success card">
+        API key is OK
+    </div>
+{% endif %}
