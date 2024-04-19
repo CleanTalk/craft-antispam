@@ -15,7 +15,7 @@
     "issues": "https://cleantalk.org/my/support"
   },
   "require": {
-    "craftcms/cms": "^3|^4"
+    "craftcms/cms": "^3|^4|^5"
   },
   "require-dev": {
     "cleantalk/antispam": "*"
