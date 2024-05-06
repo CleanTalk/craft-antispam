@@ -2,22 +2,26 @@
 
 namespace Cleantalk\CraftAntispam;
 
+use Craft;
 use craft\contactform\models\Submission;
 use craft\contactform\events\SendEvent;
 use craft\contactform\Mailer;
+use craft\helpers\UrlHelper;
 use yii\base\Event;
 
 class CraftAntispam extends \craft\base\Plugin
 {
-    private $apiKey;
+    private string $apiKey;
+    private int $keyIsOk;
 
     public function init()
     {
         parent::init();
 
-        // Don't do anythig if the api key is empty
+        // Don't do anything if the api key is empty or invalid
         $this->apiKey = $this->getSettings()->ctApiKey;
-        if ( ! $this->apiKey ) {
+        $this->keyIsOk = $this->getSettings()->keyIsOk;
+        if ( ! $this->apiKey || ! $this->keyIsOk) {
             return;
         }
 
@@ -59,5 +63,18 @@ class CraftAntispam extends \craft\base\Plugin
                 $this->antispam->checkSpam($params);
             }
         );
+    }
+
+    public function afterSaveSettings(): void
+    {
+        parent::afterSaveSettings();
+        $url = \craft\helpers\UrlHelper::cpUrl('settings/plugins/craft-antispam');
+        try {
+            Craft::$app->response
+                ->redirect(UrlHelper::url($url))
+                ->send();
+        } catch (\yii\base\InvalidRouteException ) {
+            return;
+        }
     }
 }
