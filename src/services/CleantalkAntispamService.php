@@ -7,7 +7,7 @@ use craft\base\Component;
 
 class CleantalkAntispamService extends Component
 {
-    public const ENGINE = 'craft-antispam-0.0.1';
+    public const ENGINE = 'craft-antispam-1.0.4';
 
     public function init(): void
     {
