@@ -5,6 +5,8 @@ namespace Cleantalk\CraftAntispam;
 use Craft;
 use craft\contactform\models\Submission;
 use craft\contactform\events\SendEvent;
+use craft\elements\Entry;
+use craft\base\Element;
 use craft\contactform\Mailer;
 use craft\helpers\UrlHelper;
 use yii\base\Event;
@@ -51,6 +53,10 @@ class CraftAntispam extends \craft\base\Plugin
 
     private function registerEvents()
     {
+        /**
+         * Checking for spam
+         * Integration for the Contact Form plugin
+         */
         Event::on(
             Submission::class,
             Submission::EVENT_AFTER_VALIDATE,
@@ -62,6 +68,23 @@ class CraftAntispam extends \craft\base\Plugin
                 $params['message'] = $submission->message;
                 $this->antispam->checkSpam($params);
             }
+        );
+
+        /**
+         * Checking user custom forms for spam
+         */
+        Event::on(
+            Entry::class,
+            Element::EVENT_BEFORE_SAVE,
+            function (Event $e) {
+                $entry = $e->sender;
+                // Replace "YOUR_FORM_FIELD" with the name of your "email" and "message" fields in the form.
+                $params['email'] = $entry->YOUR_FORM_FIELD;
+                $params['message'] = $entry->YOUR_FORM_FIELD;
+                if ($this->request->getIsSiteRequest()) {
+                    $this->antispam->checkSpam($params);
+                }
+            },
         );
     }
 

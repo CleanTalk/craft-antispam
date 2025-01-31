@@ -27,6 +27,13 @@ composer require cleantalk/craft-antispam
 craft plugin/install craft-antispam
 ```
 
+If you have your own custom forms, then to check the data from these forms for spam, you need to replace "YOUR_FORM_FIELD" in the file "cleantalk/craft-antispam/src/CraftAntispam.php " to the name of your fields "email" and "message" in the form
+
+```php
+$params['email'] = $entry->YOUR_FORM_FIELD;
+$params['message'] = $entry->YOUR_FORM_FIELD;
+```
+
 ## Configuring Anti-Spam protection by CleanTalk
 
 To configure the plugin, just add the api-key to the plugin's setting located at /admin/settings/plugins/craft-antispam
