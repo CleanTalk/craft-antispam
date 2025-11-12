@@ -34,7 +34,7 @@ class CraftAntispam extends \craft\base\Plugin
         $this->registerEvents();
 
         if ($this->request->getIsSiteRequest()) {
-            \Craft::$app->view->registerJsFile('https://moderate.cleantalk.org/ct-bot-detector-wrapper.js');
+            \Craft::$app->view->registerJsFile('https://fd.cleantalk.org/ct-bot-detector-wrapper.js');
         }
     }
 
