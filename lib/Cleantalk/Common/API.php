@@ -4,7 +4,7 @@ namespace Cleantalk\Common;
 
 use Cleantalk;
 use Cleantalk\Common\Antispam\CleantalkRequest;
-use Cleantalk\Common\http\Request;
+use Cleantalk\Common\Http\Request;
 
 /**
  * CleanTalk API class.
