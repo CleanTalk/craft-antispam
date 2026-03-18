@@ -37,3 +37,7 @@ $params['message'] = $entry->YOUR_FORM_FIELD;
 ## Configuring Anti-Spam protection by CleanTalk
 
 To configure the plugin, just add the api-key to the plugin's setting located at /admin/settings/plugins/craft-antispam
+
+### Websites that trust CleanTalk!
+
+![CleanTalk Anti-Spam Rating](https://cleantalk.org/webpack/img/cleantalk_rating.png)
