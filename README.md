@@ -13,6 +13,8 @@ https://plugins.craftcms.com/contact-form
 
 If you need to protect another types of forms, please, look at the [Cloud Gray Pty Ltd](https://github.com/cloudgrayau/cleantalk/blob/craft4/README.md) solution, that let you use the CleanTalk service: https://plugins.craftcms.com/cleantalk?craft4
 
+If you find this project useful, please consider starring ⭐ it on GitHub — it helps us grow and support development!
+
 ## Requirements
 
 * Craft CMS 3.0.0 or later
